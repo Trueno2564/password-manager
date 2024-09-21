@@ -94,7 +94,7 @@ export function SidebarRoutes() {
       <SingleItem href="/analytics" label="Analytics" icon={BarChart} />
 
       <SingleItem
-        onClick={() => console.log("Close sesion")}
+        onClick={() => signOut()}
         href="#"
         label="Close sesion"
         icon={DoorClosed}
