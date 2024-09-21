@@ -4,8 +4,14 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import axios from "axios";
+
 import { Button } from "@/components/ui/button";
-import { Form, FormControl, FormField, FormItem, FormLabel,
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
@@ -22,7 +28,7 @@ import { copyClipboard } from "@/lib/copyClipboard";
 import { useState } from "react";
 import { generatePassword } from "@/lib/generatePassword";
 import { Textarea } from "@/components/ui/textarea";
-import { useToast } from "@/hooks/use-toast"
+import { toast } from "@/components/ui/use-toast";
 import { useRouter } from "next/navigation";
 
 import { FormEditElementProps } from "./FormEditElement.types";
@@ -32,7 +38,6 @@ export function FormEditElement(props: FormEditElementProps) {
   const [showPassword, setShowPassword] = useState(false);
   const { dataElement } = props;
   const router = useRouter();
-  const { toast } = useToast()
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),

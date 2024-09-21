@@ -32,7 +32,7 @@ export function RepeatedPasswordsChart(props: RepeatedPasswordsChartProps) {
     },
     repeated: {
       label: "Repeated",
-      color: "hsl(var(--chart-5))",
+      color: "hsl(var(--chart-2))",
     },
   } satisfies ChartConfig;
 

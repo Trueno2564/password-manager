@@ -1,5 +1,4 @@
-
-import FormGenerator from "./FormGenerator/FormGenerator";
+import { FormGenerator } from "./FormGenerator";
 import { HeaderGenerator } from "./HeaderGenerator";
 
 export default function GeneratorPage() {

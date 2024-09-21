@@ -3,11 +3,19 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
+
 import { Button } from "@/components/ui/button";
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { useRouter } from "next/navigation";
-import { useToast } from "@/hooks/use-toast";
+import { toast } from "@/components/ui/use-toast";
 
 const formSchema = z.object({
   email: z.string().min(2).max(50),
@@ -17,7 +25,6 @@ const formSchema = z.object({
 
 export function RegisterForm() {
   const router = useRouter();
-  const { toast } = useToast()
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -76,7 +83,7 @@ export function RegisterForm() {
             <FormItem>
               <FormLabel>Username</FormLabel>
               <FormControl>
-                <Input placeholder="Trueno" {...field} />
+                <Input placeholder="Deadpool" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -89,7 +96,7 @@ export function RegisterForm() {
             <FormItem>
               <FormLabel>Password</FormLabel>
               <FormControl>
-                <Input placeholder="Shhh...." type="password" {...field} />
+                <Input placeholder="Shh...." type="password" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>

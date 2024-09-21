@@ -22,13 +22,12 @@ import Image from "next/image";
 import { useState } from "react";
 import { UploadButton } from "@/lib/uploadThing";
 import { Upload } from "lucide-react";
-import { useToast } from "@/hooks/use-toast"
+import { toast } from "@/components/ui/use-toast";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 
 export function FormProfile(props: FormProfileProps) {
   const { user } = props;
-  const { toast } = useToast()
   const router = useRouter();
   const [showUploadPhoto, setShowUploadPhoto] = useState(false);
   const [photoUploaded, setPhotoUploaded] = useState(false);

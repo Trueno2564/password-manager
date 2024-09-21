@@ -33,7 +33,7 @@ export function ViewsAnalyticsChart(props: ViewsAnalyticsChartProps) {
     },
     chrome: {
       label: "Unique Passw",
-      color: "hsl(var(--chart-1))",
+      color: "hsl(var(--chart-3))",
     },
     safari: {
       label: "Repeated Passw",

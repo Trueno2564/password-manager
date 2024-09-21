@@ -1,4 +1,12 @@
-import { CreditCard, Earth, Landmark, LayoutList, Lock, Settings, Star, UserPen,
+import {
+  CreditCard,
+  Earth,
+  Landmark,
+  LayoutList,
+  Lock,
+  Settings,
+  Star,
+  UserPen,
 } from "lucide-react";
 
 export const dataSidebarElements = [
@@ -7,8 +15,8 @@ export const dataSidebarElements = [
     icon: LayoutList,
     children: [
       {
-        item: "Favorites",
-        href: "/favorites",
+        item: "Favourites",
+        href: "/favourites",
         icon: Star,
       },
       {

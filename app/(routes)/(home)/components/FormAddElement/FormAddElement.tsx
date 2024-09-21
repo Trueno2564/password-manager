@@ -6,22 +6,34 @@ import { z } from "zod";
 import axios from "axios";
 
 import { Button } from "@/components/ui/button";
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage, } from "@/components/ui/form";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { formSchema } from "./FormAddElement.form";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue, } from "@/components/ui/select";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Copy, Earth, Eye, Shuffle } from "lucide-react";
 import { copyClipboard } from "@/lib/copyClipboard";
 import { useState } from "react";
 import { generatePassword } from "@/lib/generatePassword";
 import { Textarea } from "@/components/ui/textarea";
-import { useToast } from "@/hooks/use-toast"
+import { toast } from "@/components/ui/use-toast";
 import { useRouter } from "next/navigation";
 import { FormAddElementProps } from "./FormAddElement.types";
 
 export function FormAddElement(props: FormAddElementProps) {
-  const { toast } = useToast()
   const { userId, closeDialog } = props;
   const [showPassword, setShowPassword] = useState(false);
   const router = useRouter();

@@ -8,7 +8,7 @@ import {
   DropdownMenuLabel,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { useToast } from "@/hooks/use-toast"
+import { toast } from "@/components/ui/use-toast";
 import { Element } from "@prisma/client";
 import { ColumnDef } from "@tanstack/react-table";
 import { Copy, MoreHorizontal, User } from "lucide-react";
@@ -38,7 +38,6 @@ export const columns: ColumnDef<ColumnProps>[] = [
     cell: ({ row }) => {
       const password = row.original.password;
       const username = row.original.username;
-      const { toast } = useToast()
 
       const onEditElement = () => {
         window.location.href = `/element/${row.original.id}`;

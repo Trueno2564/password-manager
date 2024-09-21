@@ -10,9 +10,8 @@ import { UserGenerator } from "../UserGenerator";
 import { generateCustomPassword } from "@/lib/generateCustomPassword";
 import { generateRandomUsername } from "@/lib/generateRandomUser";
 import { generateRandomEmail } from "@/lib/generateRandomEmail";
-import { useToast } from "@/hooks/use-toast";
 
-function FormGenerator() {
+export function FormGenerator() {
   const [itemValueInput, setItemValueInput] = useState("");
   const [selectedValue, setSelectedValue] = useState<
     "password" | "user" | string
@@ -78,28 +77,20 @@ function FormGenerator() {
     }
   };
 
-  const { toast } = useToast()
-  const copyItemClipboard = (itemValueInput: string) => {
-    navigator.clipboard.writeText(itemValueInput);
-    toast({
-      title: "Value copied ☑️"
-    });
-  };
-
   return (
     <div className="mt-5 max-w-2xl">
-      <div className="relative w-full justify-center items-center">
+      <div className="relative w-full">
         <Input
           placeholder="input.."
           value={itemValueInput}
           onChange={() => {}}
         />
         <Copy
-          className="absolute top-2 right-12 cursor-pointer h-5 w-5"
-          onClick={() => copyItemClipboard(itemValueInput)}
+          className="absolute top-3 right-12 cursor-pointer h-5 w-5"
+          onClick={() => copyClipboard(itemValueInput)}
         />
         <Shuffle
-          className="absolute top-2 right-2 cursor-pointer h-5 w-5"
+          className="absolute top-3 right-2 cursor-pointer h-5 w-5"
           onClick={handleShuffleClick}
         />
       </div>
@@ -138,5 +129,3 @@ function FormGenerator() {
     </div>
   );
 }
-
-export default FormGenerator

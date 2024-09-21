@@ -60,7 +60,7 @@ export function PasswordGenerator(props: PasswordGeneratorProps) {
               htmlFor="minus"
               className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed perr-disabled:opacity-70"
             >
-              Minúsculas a-z
+              Minúsculas A-Z
             </label>
           </div>
           <div className="flex items-center space-x-2 my-4 bg-slate-100 rounded-md shadow-md p-4">

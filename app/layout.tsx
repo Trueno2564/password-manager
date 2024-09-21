@@ -1,17 +1,17 @@
 import type { Metadata } from "next";
-import { Bai_Jamjuree } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 
-const BaiFont = Bai_Jamjuree({
-  weight: ['200', '400', '500', '700'],
-  subsets: ['latin'],
-  display: 'swap',
-})
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["200", "400", "500", "800"],
+});
 
 export const metadata: Metadata = {
-  title: "BEAR - Password",
-  description: "Generated password manager app",
+  title: "TarrePassword",
+  description: "Creating a password manager",
+  manifest: "/manifest.json",
 };
 
 export default function RootLayout({
@@ -21,10 +21,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${BaiFont.className} antialiased`}>
+      <body className={poppins.className}>
         {children}
-        <Toaster/>
+        <Toaster />
       </body>
     </html>
   );
