@@ -8,7 +8,7 @@ import {
   DropdownMenuLabel,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { toast } from "@/components/ui/use-toast";
+import { toast } from "@/hooks/use-toast";
 import { Element } from "@prisma/client";
 import { ColumnDef } from "@tanstack/react-table";
 import { Copy, MoreHorizontal, User } from "lucide-react";

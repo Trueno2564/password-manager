@@ -28,7 +28,7 @@ import { copyClipboard } from "@/lib/copyClipboard";
 import { useState } from "react";
 import { generatePassword } from "@/lib/generatePassword";
 import { Textarea } from "@/components/ui/textarea";
-import { toast } from "@/components/ui/use-toast";
+import { toast } from "@/hooks/use-toast";
 import { useRouter } from "next/navigation";
 
 import { FormEditElementProps } from "./FormEditElement.types";
@@ -65,6 +65,7 @@ export function FormEditElement(props: FormEditElementProps) {
         title: "Something went wrong",
         variant: "destructive",
       });
+      return error
     }
   };
 

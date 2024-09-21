@@ -8,7 +8,6 @@ import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -22,7 +21,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { UploadButton } from "@/lib/uploadThing";
 import { Upload } from "lucide-react";
-import { toast } from "@/components/ui/use-toast";
+import { toast } from "@/hooks/use-toast";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 
@@ -58,6 +57,7 @@ export function FormProfile(props: FormProfileProps) {
         title: "Something went wrong",
         variant: "destructive",
       });
+      return error
     }
   };
 

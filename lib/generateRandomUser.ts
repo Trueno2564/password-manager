@@ -24,6 +24,7 @@ export const generateRandomUsername = (length = 8) => {
     "Falcon",
   ];
 
+  // eslint-disable-next-line
   const randomItem = (array: any) =>
     array[Math.floor(Math.random() * array.length)];
 

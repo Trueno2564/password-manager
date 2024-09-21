@@ -29,7 +29,7 @@ import { copyClipboard } from "@/lib/copyClipboard";
 import { useState } from "react";
 import { generatePassword } from "@/lib/generatePassword";
 import { Textarea } from "@/components/ui/textarea";
-import { toast } from "@/components/ui/use-toast";
+import { toast } from "@/hooks/use-toast";
 import { useRouter } from "next/navigation";
 import { FormAddElementProps } from "./FormAddElement.types";
 
@@ -74,6 +74,7 @@ export function FormAddElement(props: FormAddElementProps) {
         title: "Something went wrong",
         variant: "destructive",
       });
+      return error
     }
   };
 

@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import { Bai_Jamjuree } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 
-const poppins = Poppins({
+const BaiFont = Bai_Jamjuree({
   subsets: ["latin"],
-  weight: ["200", "400", "500", "800"],
+  weight: ["200", "400", "500", "700"],
 });
 
 export const metadata: Metadata = {
-  title: "TarrePassword",
+  title: "BEAR - Password",
   description: "Creating a password manager",
   manifest: "/manifest.json",
 };
@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={poppins.className}>
+      <body className={BaiFont.className}>
         {children}
         <Toaster />
       </body>
