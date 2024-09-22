@@ -21,7 +21,7 @@ export function SidebarMobile() {
       </SheetTrigger>
       <SheetContent side="left" className="bg-blue-800 text-white">
         <SheetHeader className="text-left mb-5">
-          <SheetTitle className="text-white">TarrePassword</SheetTitle>
+          <SheetTitle className="text-white">BEAR. Password</SheetTitle>
           <SheetDescription className="text-slate-100">
             Create and manage all of your password
           </SheetDescription>
